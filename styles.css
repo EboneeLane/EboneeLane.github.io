@@ -44,9 +44,21 @@ section{
 	max-width:800px;
 	margin:0 auto;
 }
+section:target h1{
+	animation:flash 1s;
+}
+@keyframes flash{
+	from{
+		text-shadow:5px 5px 0px #0D4D4D;
+		            
+	}
+	to{
+		text-shadow:0px 0px 0px #0D4D4D;
+	}
+}
 address{
 	white-space:pre-line;
-	marigin-bottom:20px;
+	margin-bottom:20px;
 }
 
  .hero{
@@ -75,9 +87,9 @@ address{
 }
 .headshot:hover{
 	transform:rotate(360deg);
-	box-shadow: 0px 0px 100px 50px #fc0,
-				0px 0px 100px 20px #960 inset;
-)
+	box-shadow: 0px 0px 100px 50px #0D4D4D,
+				0px 0px 100px 20px #407F7F inset;
+}
 .headshot img{
 	transition:opacity 1s;
 }
@@ -86,15 +98,23 @@ address{
 	opacity:0;
 	
 }
-
-
-
-
-
-
-
-
-
-	
-
-   
+.nav{
+	width:100%;
+	display:flex;
+	position:fixed;
+}
+.nav li{
+	list-style-type:none;
+	flex-grow:1;
+}
+.nav li a{
+	display:block;
+	line-height:50px;
+	background-color:#0D4D4D;
+	color:#666;
+	text-shadow:1px 1px 0px #407F7F;
+	transition:background-color 0.2s;
+}
+.nav li a:hover{
+	background-color:#669999;
+}
